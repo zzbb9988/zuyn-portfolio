@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#101010"/>
+      <stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="55%" cy="50%" r="70%">
+      <stop offset="0" stop-color="rgba(255,255,255,0.05)"/>
+      <stop offset="1" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <linearGradient id="boxRed" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8B0E14"/>
+      <stop offset="0.55" stop-color="#B1121D"/>
+      <stop offset="1" stop-color="#D01C2B"/>
+    </linearGradient>
+    <linearGradient id="boxRedTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9C111A"/>
+      <stop offset="1" stop-color="#E02A39"/>
+    </linearGradient>
+    <linearGradient id="innerShadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(0,0,0,0.10)"/>
+      <stop offset="1" stop-color="rgba(0,0,0,0.55)"/>
+    </linearGradient>
+    <linearGradient id="choc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b2b29"/>
+      <stop offset="1" stop-color="#1f1615"/>
+    </linearGradient>
+    <linearGradient id="cup" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f6f6"/>
+      <stop offset="1" stop-color="#cfcfcf"/>
+    </linearGradient>
+    <radialGradient id="coffee" cx="40%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#7b5e58"/>
+      <stop offset="1" stop-color="#3c2c29"/>
+    </radialGradient>
+    <filter id="soft2" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="rgba(0,0,0,0.6)"/>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="rgba(0,0,0,0.55)"/>
+    </filter>
+    <filter id="deep" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="26" stdDeviation="26" flood-color="rgba(0,0,0,0.55)"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- surface -->
+  <g opacity="0.9">
+    <path d="M980 60 L1600 360 L1600 900 L700 900 Z" fill="rgba(255,255,255,0.03)"/>
+    <path d="M1040 100 L1600 380 L1600 460 L1010 160 Z" fill="rgba(255,255,255,0.02)"/>
+  </g>
+
+  <!-- red box render (isometric-ish) -->
+  <g filter="url(#deep)">
+    <!-- outer box base -->
+    <path d="M210 420 L940 240 L1380 440 L660 640 Z" fill="url(#boxRed)"/>
+    <!-- box inner cavity -->
+    <path d="M280 420 L930 265 L1310 440 L670 610 Z" fill="rgba(20,20,20,0.92)"/>
+    <!-- rim highlight -->
+    <path d="M280 420 L930 265 L940 240 L210 420 Z" fill="rgba(255,255,255,0.08)"/>
+
+    <!-- lid (open) -->
+    <path d="M940 240 L1320 175 L1550 300 L1380 440 Z" fill="url(#boxRedTop)"/>
+    <path d="M940 240 L1320 175 L1336 198 L960 258 Z" fill="rgba(255,255,255,0.07)"/>
+
+    <!-- inner compartments -->
+    <g>
+      <path d="M345 455 L560 390 L690 430 L470 495 Z" fill="#d24a54" opacity="0.55"/>
+      <path d="M610 380 L840 305 L980 350 L745 425 Z" fill="#d24a54" opacity="0.55"/>
+      <path d="M505 520 L715 450 L850 492 L635 565 Z" fill="#d24a54" opacity="0.55"/>
+      <path d="M780 450 L1010 378 L1140 420 L905 494 Z" fill="#d24a54" opacity="0.55"/>
+      <path d="M355 455 L560 390 L560 470 L355 535 Z" fill="rgba(0,0,0,0.35)"/>
+      <path d="M610 380 L840 305 L840 390 L610 465 Z" fill="rgba(0,0,0,0.35)"/>
+      <path d="M505 520 L715 450 L715 530 L505 605 Z" fill="rgba(0,0,0,0.35)"/>
+      <path d="M780 450 L1010 378 L1010 458 L780 535 Z" fill="rgba(0,0,0,0.35)"/>
+    </g>
+
+    <!-- chocolates (simple facets) -->
+    <g filter="url(#soft2)">
+      <path d="M405 485 L500 455 L570 475 L475 505 Z" fill="url(#choc)"/>
+      <path d="M430 475 L500 458 L545 470 L472 492 Z" fill="rgba(255,255,255,0.06)"/>
+
+      <path d="M690 395 L780 365 L845 385 L755 415 Z" fill="url(#choc)"/>
+      <path d="M710 387 L780 370 L825 382 L750 405 Z" fill="rgba(255,255,255,0.06)"/>
+
+      <path d="M595 545 L685 515 L755 535 L665 565 Z" fill="url(#choc)"/>
+      <path d="M615 536 L685 520 L730 532 L655 555 Z" fill="rgba(255,255,255,0.06)"/>
+
+      <path d="M875 475 L965 445 L1035 465 L945 495 Z" fill="url(#choc)"/>
+      <path d="M895 466 L965 450 L1010 462 L935 485 Z" fill="rgba(255,255,255,0.06)"/>
+    </g>
+
+    <!-- striped insert -->
+    <g opacity="0.95">
+      <path d="M330 530 L470 485 L470 565 L330 610 Z" fill="rgba(0,0,0,0.65)"/>
+      <path d="M342 535 L365 528 L365 604 L342 611 Z" fill="rgba(255,255,255,0.75)"/>
+      <path d="M382 522 L405 515 L405 592 L382 599 Z" fill="rgba(255,255,255,0.75)"/>
+      <path d="M422 510 L445 503 L445 579 L422 586 Z" fill="rgba(255,255,255,0.75)"/>
+    </g>
+  </g>
+
+  <!-- coffee cup -->
+  <g filter="url(#deep)">
+    <ellipse cx="1260" cy="735" rx="150" ry="44" fill="rgba(0,0,0,0.55)"/>
+    <ellipse cx="1260" cy="715" rx="140" ry="40" fill="url(#cup)"/>
+    <ellipse cx="1260" cy="712" rx="106" ry="30" fill="url(#coffee)"/>
+    <path d="M1365 690 C1410 690, 1430 725, 1400 750 C1375 770, 1345 760, 1332 742" fill="none" stroke="url(#cup)" stroke-width="18" stroke-linecap="round"/>
+    <path d="M1368 702 C1392 704, 1400 726, 1386 738" fill="none" stroke="rgba(0,0,0,0.22)" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>
